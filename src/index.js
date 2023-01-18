@@ -1,25 +1,25 @@
-import "./style.css";
+import './style.css';
 
 const tasks = [
   {
-    description: "Learn JS, HTML & CSS",
+    description: 'Learn JS, HTML & CSS',
     completed: false,
     index: 1,
   },
   {
-    description: "Go to gym",
+    description: 'Go to gym',
     completed: true,
     index: 2,
   },
   {
-    description: "Buy protein",
+    description: 'Buy protein',
     completed: false,
     index: 3,
   },
 ];
 
 const taskList = () => {
-  let content = "";
+  let content = '';
   tasks.forEach((task) => {
     content += `
     <ul  id="task-list">
@@ -31,9 +31,9 @@ const taskList = () => {
   return content;
 };
 
-const rendering = () => document.getElementById("to-dos");
+const rendering = () => document.getElementById('to-dos');
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   const content = taskList();
   rendering().innerHTML = content;
 });
