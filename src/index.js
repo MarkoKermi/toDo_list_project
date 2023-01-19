@@ -34,11 +34,13 @@ const renderToDoList = (toDoListArray) => {
     const toDoCheckbox = document.createElement('input');
     toDoCheckbox.classList.add('todo-list-li-checkbox');
     toDoCheckbox.type = 'checkbox';
+    toDoCheckbox.checked = toDo.completed;
     toDoItem.appendChild(toDoCheckbox);
 
     const toDoText = document.createElement('input');
     toDoText.classList.add('todo-list-li-text');
     toDoText.value = toDo.task;
+    // toDoText.disabled = true;
     toDoItem.appendChild(toDoText);
 
     if (toDo.completed) {
@@ -51,6 +53,24 @@ const renderToDoList = (toDoListArray) => {
     toDoItem.appendChild(crossIcon);
 
     toDoList.appendChild(toDoItem);
+  });
+};
+
+const editTask = (e, toDoListArray) => {
+  const clickedTask = e.target.closest('.todo-list-li-text');
+  clickedTask.disabled = false;
+  clickedTask.focus();
+  const taskText = clickedTask.value;
+  clickedTask.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && clickedTask.value !== '') {
+      const taskIndex = toDoListArray.findIndex(
+        (task) => task.task === taskText,
+      );
+      toDoListArray[taskIndex].task = clickedTask.value;
+      clickedTask.disabled = true;
+      updateLocalStorage(toDoListArray);
+      renderToDoList(toDoListArray);
+    }
   });
 };
 
@@ -81,7 +101,6 @@ const markTask = (e, toDoListArray) => {
 
 const input = document.querySelector('.task-input');
 const todoList = document.querySelector('.toDo_list_ul');
-const clearCompletedBtn = document.querySelector('.clearbtn');
 const addTaskBtn = document.querySelector('.add_btn');
 
 input.addEventListener('keypress', (e) => {
@@ -108,10 +127,10 @@ todoList.addEventListener('click', (e) => {
   }
 });
 
-clearCompletedBtn.addEventListener('click', () => {
-  const toDoList = clearCompletedBtn(toDoTasks);
-  updateLocalStorage(toDoList);
-  renderToDoList(toDoList);
+todoList.addEventListener('click', (e) => {
+  if (e.target.closest('.todo-list-li-text')) {
+    editTask(e, toDoTasks);
+  }
 });
 
 todoList.addEventListener('click', (e) => {
