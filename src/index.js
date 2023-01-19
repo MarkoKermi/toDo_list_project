@@ -34,7 +34,6 @@ const renderToDoList = (toDoListArray) => {
     const toDoCheckbox = document.createElement("input");
     toDoCheckbox.classList.add("todo-list-li-checkbox");
     toDoCheckbox.type = "checkbox";
-    // toDoCheckbox.checked = toDo.completed;
     toDoItem.appendChild(toDoCheckbox);
 
     const toDoText = document.createElement("input");
@@ -53,13 +52,6 @@ const renderToDoList = (toDoListArray) => {
 
     toDoList.appendChild(toDoItem);
   });
-};
-
-const editTask = (e, toDoListArray) => {
-  const clickedTask = e.target.closest(".todo-list-li-text");
-  clickedTask.disabled = false;
-  clickedTask.focus();
-  const taskText = clickedTask.value;
 };
 
 const deleteTask = (e, toDoListArray) => {
@@ -117,14 +109,13 @@ todoList.addEventListener("click", (e) => {
 });
 
 clearCompletedBtn.addEventListener("click", () => {
-  const toDoList = clearCompleted(toDoTasks);
+  const toDoList = clearCompletedBtn(toDoTasks);
   updateLocalStorage(toDoList);
   renderToDoList(toDoList);
 });
 
 todoList.addEventListener("dblclick", (e) => {
   if (e.target.closest(".todo-list-li-text")) {
-    editTask(e, toDoTasks);
   }
 });
 

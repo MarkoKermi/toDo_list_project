@@ -5,7 +5,7 @@
   --white: #fff;
   --background_btn_hover: #333;
   --to_do: #eee;
-  --black: #000000;
+  --black: #000;
 }
 
 html,
@@ -36,6 +36,7 @@ body {
 }
 
 .task-input {
+  /* stylelint-disable-next-line */
   width: -webkit-fill-available;
   height: 30px;
   padding: 0 0 0 7px;
@@ -77,6 +78,7 @@ body {
 }
 
 .todo-list-li-text {
+  /* stylelint-disable-next-line */
   width: -webkit-fill-available;
   padding: 0 7px;
   background-color: var(--white);
