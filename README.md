@@ -27,10 +27,10 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <!-- <img src="murple_logo.png" alt="logo" width="140"  height="auto" /> -->
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <!-- <h3><b>Microverse README Template</b></h3> -->
 
 </div>
 
@@ -60,15 +60,24 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [toDo_list] <a name="toDo_list"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[toDo_list]** is a useful daily tool for seting you daily goals and needs.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Build With</summary>
+  <ul>
+    <li><a href="https://html.com/">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
+  </ul>
+</details>
 
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
@@ -138,6 +147,7 @@ Example command:
 ### Setup
 
 Clone this repository to your desired folder:
+https://github.com/MarkoKermi/toDo_list_project.git
 
 <!--
 Example commands:
@@ -207,15 +217,9 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@MarkoKermi](https://github.com/MarkoKermi?tab=repositories)
+- Twitter: [@MarkoKerm](https://twitter.com/MarkoKerm)
+- LinkedIn: [MarkoKermichiev](https://www.linkedin.com/in/marko-kermichiev-78b1bb110/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
