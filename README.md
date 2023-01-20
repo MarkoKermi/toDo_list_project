@@ -110,7 +110,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]((https://markokermi.github.io/toDo_list_project/))
+- [Live Demo Link](https://markokermi.github.io/toDo_list_project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
